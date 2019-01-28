@@ -10,7 +10,7 @@ var watch = [
   join(__dirname, '../src/browser'),
 ];
 
-var pathCore = join(__dirname, '../../sqlectron-core/lib');
+var pathCore = join(__dirname, '../../@systembug/sqlectron-core/lib');
 try {
   fs.accessSync(pathCore, fs.F_OK);
   watch.push(pathCore);

@@ -1,4 +1,4 @@
-import * as sqlectron from 'sqlectron-core';
+import * as sqlectron from '@systembug/sqlectron-core';
 import config from './config';
 
 // Hack solution to ignore console.error from dtrace imported by bunyan
@@ -29,6 +29,6 @@ if (dataConfig.log.file) {
 const logger = createLogger(loggerConfig);
 
 // Set custom logger for sqlectron-core
-sqlectron.setLogger((namespace) => logger.child({ namespace: `sqlectron-core:${namespace}` }));
+sqlectron.setLogger((namespace) => logger.child({ namespace: `@systembug/sqlectron-core:${namespace}` }));
 
 export default (namespace) => logger.child({ namespace });
